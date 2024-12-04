@@ -4,7 +4,7 @@ import express, { Request, Response } from 'npm:express';
 
 import { bot } from "./lib/bot.ts";
 
-import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./keyboards.ts"; // импорт клавиатур
+import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./lib/keyboards.ts"; // импорт клавиатур
 
 import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт интерфейсов
 
