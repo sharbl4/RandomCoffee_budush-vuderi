@@ -1,6 +1,6 @@
-import { MyContext } from "./lib/interfaces.ts";
-import { database, info } from "./lib/bot.ts";
-import { acceptKeyboard } from "./lib/keyboards.ts";
+import { MyContext } from "./interfaces.ts";
+import { database, info } from "./bot.ts";
+import { acceptKeyboard } from "./keyboards.ts";
 
 export async function reviewProfile(ctx: MyContext) {
   await setState("review");
