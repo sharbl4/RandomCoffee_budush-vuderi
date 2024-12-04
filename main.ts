@@ -1,6 +1,15 @@
 import { webhookCallback } from "https://deno.land/x/grammy@v1.32.0/mod.ts";
+
 import express, { Request, Response } from 'npm:express';
+
 import { bot } from "./lib/bot.ts";
+
+import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./lib/keyboards.ts"; // импорт клавиатур
+
+import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт интерфейсов
+
+import { reviewProfile, setState } from "./lib/functions.ts"; //импорт функций
+
 
 const app = express();
 
@@ -28,3 +37,4 @@ const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
