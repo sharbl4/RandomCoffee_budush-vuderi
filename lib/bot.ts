@@ -25,6 +25,11 @@ export const info: UserInfo = {
   rating: 0,
 };
 
+const bot = new Bot<MyContext>('7524074092:AAG-trTPsVnR3tpKP4-jMkiB7NYa0GGkyKw');
+
+// Определение сессий
+bot.use(session({ initial: () => ({ userData: {} }) }));
+
 bot.command("start", async (ctx) => { // бот получает команду /start
   info.id = Number(ctx.msg.from?.id);
   if (Boolean((await database.get(["users", info.id, "done"])).value) != false) {
