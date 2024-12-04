@@ -2,13 +2,13 @@ import { webhookCallback } from "https://deno.land/x/grammy@v1.32.0/mod.ts";
 
 import express, { Request, Response } from 'npm:express';
 
-import { bot } from "./lib/bot.ts";
+import { bot } from "./bot.ts";
 
-import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./lib/keyboards.ts"; // импорт клавиатур
+import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./keyboards.ts"; // импорт клавиатур
 
-import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт интерфейсов
+import { MyContext, UserInfo } from "./interfaces.ts"; //импорт интерфейсов
 
-import { reviewProfile, setState } from "./lib/functions.ts"; //импорт функций
+import { reviewProfile, setState } from "./functions.ts"; //импорт функций
 
 
 const app = express();
