@@ -8,6 +8,7 @@ export const acceptKeyboard = new Keyboard().text("Да!").text(
 )
   .resized(true).oneTime(true);
 
+
 export const changesKeyboard = new Keyboard().text(
   "Хочу заполнить профиль заново",
 )
