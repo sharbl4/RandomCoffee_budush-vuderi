@@ -6,6 +6,8 @@ import { MyContext, UserInfo } from "./interfaces.ts"; //импорт интер
 
 import { reviewProfile, setState } from "./functions.ts"; 
 
+import { SessionFlavor } from 'grammy/out/from-session';
+
 //база данных deno
 export const database = await Deno.openKv();
 
