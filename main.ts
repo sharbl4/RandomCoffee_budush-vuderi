@@ -11,6 +11,7 @@ import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт инт
 import { reviewProfile, setState } from "./lib/functions.ts"; //импорт функций
 
 
+
 const app = express();
 
 const handleUpdate = webhookCallback(bot, 'express');
