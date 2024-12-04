@@ -4,7 +4,7 @@ import { changesKeyboard, menuKeyboard, yesOrNo } from "./lib/keyboards.ts"; // 
 
 import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт интерфейсов
 
-import { reviewProfile, setState } from "./lib/functions.ts"; //импорт функций
+import { reviewProfile, setState } from "./lib/functions.ts"; 
 
 //база данных deno
 export const database = await Deno.openKv();
