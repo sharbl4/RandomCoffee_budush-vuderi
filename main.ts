@@ -6,7 +6,7 @@ import { bot } from "./lib/bot.ts";
 
 import { changesKeyboard, menuKeyboard, yesOrNo, acceptKeyboard} from "./lib/keyboards.ts"; // импорт клавиатур
 
-import { MyContext, UserInfo,} from "./lib/interfaces.ts"; //импорт интерфейсов
+import { MyContext, UserInfo } from "./lib/interfaces.ts"; //импорт интерфейсов
 
 import { reviewProfile, setState } from "./lib/functions.ts"; //импорт функций
 
