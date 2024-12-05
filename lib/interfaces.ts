@@ -17,14 +17,4 @@ export type MyContext = Context & {
   config: UserInfo;
 };
 
-export interface UserData {
-  name?: string;
-  email?: string;
-}
-
-export interface MyContext extends Context {
-  session: {
-    userData: UserData;
-  };
-}
 
