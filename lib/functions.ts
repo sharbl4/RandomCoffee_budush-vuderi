@@ -9,7 +9,7 @@ export async function reviewProfile(ctx: MyContext) {
     `${info.name}, ${info.age}\n` +
       `Список интересов: ${info.interests.toString()}`,
   );
-  await ctx.reply("Геопозиция района, где будет удобно встретиться:");
+  await ctx.reply("Геопозиция района, где будет удообно встретиться:");
   await ctx.replyWithLocation(info.geo.latitude, info.geo.longitiute);
   await ctx.reply("Все верно?", {
     reply_markup: acceptKeyboard,
@@ -20,3 +20,4 @@ export async function setState(state: string) {
   info.state = state;
   await database.set(["users", info.id, "state"], state);
 }
+
