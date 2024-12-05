@@ -2,7 +2,7 @@ import { Bot, Context } from "https://deno.land/x/grammy@v1.32.0/mod.ts";
 
 import { changesKeyboard, menuKeyboard, yesOrNo } from "./keyboards.ts"; // импорт клавиатур
 
-import { MyContext, UserInfo } from "./interfaces.ts"; //импорт интерфейсов
+import { MyContext, UserInfo, UserData } from "./interfaces.ts"; //импорт интерфейсов
 
 import { reviewProfile, setState } from "./functions.ts"; 
 
