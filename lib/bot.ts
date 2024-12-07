@@ -35,12 +35,7 @@ bot.command("start", async (ctx) => { // бот получает команду 
     info.interests = Array(
       String((await database.get(["users", info.id, "interests"])).value),
     );
-    info.geo.latitude = Number(
-      (await database.get(["users", info.id, "geo", "latitude"])).value,
-    );
-    info.geo.longitiute = Number(
-      (await database.get(["users", info.id, "geo", "longtitude"])).value,
-    );
+   
     info.time = String((await database.get(["users", info.id, "state"])).value);
     info.state = String(
       (await database.get(["users", info.id, "state"])).value,
@@ -147,15 +142,9 @@ bot.on("message", async (ctx) => {
         if (isNaN(Number(ctx.msg.text))) {
           await ctx.reply("Косячишь! Возраст-это число");
           return;
+          break
         }
-        info.age = Number(ctx.msg.text);
-        await ctx.reply(
-          "Вот, молодец! Теперь отправь, куда можно подъехать, пообщаться",
-        );
-        await ctx.reply(
-          "Если не знаешь, куда нажимать, то <скрепка->местоположение>",
-        );
-        setState("setGeo");
+
         break;
 
       case "review":
