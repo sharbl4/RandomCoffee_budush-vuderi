@@ -209,20 +209,7 @@ bot.on("message", async (ctx) => {
             break;
         }
         break;
-      case "setGeo": // выпилить МАРК
-        if (!ctx.msg.location) {
-          await ctx.reply(
-            "Я не понимаю. Отправь свое местоположение",
-          );
-          return;
-        }
-        info.geo.latitude = ctx.msg.location?.latitude;
-        info.geo.longitiute = ctx.msg.location?.longitude; // записываем геопозицию в виде: ширина, долгота
-        await ctx.reply(
-          "Давай, говори о себе", // это надо сдеалть отдельно МАРК
-        );
-        setState("setInterests"); // не в этом кейсе
-        break;
+
 
       case "setInterests":
         if (ctx.msg.text) {
