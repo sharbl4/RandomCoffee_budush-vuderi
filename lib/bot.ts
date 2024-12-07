@@ -213,6 +213,7 @@ bot.on("message", async (ctx) => {
           info.interests.toString(),
         );
         await ctx.reply("Это все?", { reply_markup: yesOrNo }); // смотри bot.callbackQuery
+        setState("setInterests");
         break;
 
       default:
