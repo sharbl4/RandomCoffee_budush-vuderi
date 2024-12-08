@@ -29,7 +29,7 @@ export const interesKeyboard = new InlineKeyboard()
   .text("Энитайм. Лобкова, 6/1");
 
 
-export const interesKeyboard=new InlineKeyboard()
+export const coffeeKeyboard=new InlineKeyboard()
   .text("Codding").row()
   .text("Web-desigm").row()
   .text("SMM").row()
