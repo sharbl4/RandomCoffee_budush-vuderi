@@ -146,6 +146,7 @@ bot.on("message", async (ctx) => {
         
       case "setInterests":
        // Отправить клавиатуру с сообщением
+        await ctx.reply("Ты собака");
         await ctx.reply(text, {
         reply_markup: interesKeyboard,
         });
@@ -153,7 +154,7 @@ bot.on("message", async (ctx) => {
         await ctx.reply("Вот чем ты интересуешься:",
         );
         await ctx.reply(
-          info.interests = ctx.msg.text || "";
+        info.interests.toString(),
         );
         setState("setCoffee");
         break;
@@ -170,7 +171,7 @@ bot.on("message", async (ctx) => {
           "Встретиться тут:",
         );
         await ctx.reply(
-        info.coffee = ctx.msg.text || "";
+        info.interests.toString(),
         );
         await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
