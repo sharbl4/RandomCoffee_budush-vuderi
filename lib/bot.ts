@@ -131,7 +131,7 @@ bot.on("message", async (ctx) => {
         }
         break;
 
-      case "setAge":{
+      case "setAge":
         if (isNaN(Number(ctx.msg.text))) {
           await ctx.reply("Косячишь! Возраст-это число");
           return;
@@ -139,10 +139,8 @@ bot.on("message", async (ctx) => {
         else {
           await ctx.reply("Ну, проходи тогда " + info.name + "!");
           info.age = ctx.msg.text || "";
-          break
-          }
+          setState("setInterests");
         }
-      setState("setInterests");
         break;
 
         
