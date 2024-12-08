@@ -22,19 +22,40 @@ export const info: UserInfo = {
   done: false,
 };
 
-
 bot.command("start", async (ctx) => { // бот получает команду /start
   info.id = Number(ctx.msg.from?.id);
+  if (Boolean((await database.get(["users", info.id, "done"])).value) != false) {
+    // опитимизировать?
+    info.name = String((await database.get(["users", info.id, "name"])).value);
+    info.age = Number((await database.get(["users", info.id, "age"])).value);
+    info.interests = Array(
+      String((await database.get(["users", info.id, "interests"])).value),
+    );
+    info.geo.latitude = Number(
+      (await database.get(["users", info.id, "geo", "latitude"])).value,
+    );
+    info.geo.longitiute = Number(
+      (await database.get(["users", info.id, "geo", "longtitude"])).value,
+    );
+    info.time = String( database.get(["users", info.id, "state"])).value);
+    info. State = String(
+      (await database.get(["users", info.id, "state"])).value,
+    );
+    info.rating = Number(
+      (await database.get(["users", info.id, "rating"])).value,
+    );
+    await ctx.reply(`Привет, ${info.name}!`, { reply_markup: menuKeyboard });
+  } else {
     await ctx.reply(
-      "Йоу, чё как?! \nТы тут в первый раз. Тогда поясню. \nЯ бот, который поможет завести новые знакомства, встретиться, пообщатся. Ты не против? \nТогда начнём!",
+      "Привет!👋🏻 \nВижу, ты тут впервые. Я - бот Коффи☕️. С моей помощью ты сможешь пообщаться с людьми, которым интересно то же, что и тебе!",
     );
     await ctx.reply(
-      "Звать то тебя как? А прозвище то есть?",
+      "🤔 А как зовут тебя? \n <b>Учти, что твое имя увидят другие пользователи.</b>",
+      { parse_mode: "HTML" }, // нужно, чтобы использовать теги из html
     );
     setState("setName"); // следующим сообщением боту должно придти имя
   }
 });
-
 // Команда /like
 bot.command("like", async (ctx) => {
     const userId = ctx.from?.id.toString();
