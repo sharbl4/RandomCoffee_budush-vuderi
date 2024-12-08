@@ -4,7 +4,7 @@ export interface UserInfo {
   id: number;
   name: string;
   age: string;
-  interests: string;
+  interests: string[];
   coffee:string;
   done: boolean;
 }
