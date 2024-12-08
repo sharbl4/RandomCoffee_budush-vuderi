@@ -10,7 +10,7 @@ import { reviewProfile, setState } from "./functions.ts"; //импорт фун�
 //база данных deno
 export const database = await Deno.openKv();
 
-export const bot = new Bot<MyContext>(Deno.env.get("BOT_TOKEN") || "7785377297:AAHQXYH32S0fE5TOZvuN1GPxxAnHOvT0OXg");
+export const bot = new Bot<MyContext>(Deno.env.get("BOT_TOKEN") || "7726323061:AAF5Ww47wy9VyHUo8TDnG22PxqybeiIsjfk");
 
 // info будет нужна для сохранения инфо пользователя в бд (или получения) - представляет из себя набор данных о пользователе  
 export const info: UserInfo = {
