@@ -138,7 +138,6 @@ bot.on("message", async (ctx) => {
           return;
         }
         info.age = Number(ctx.msg.text);
-        );
         await ctx.reply("Выбери на клавиатуре свои интересы", {
         reply_markup: interesKeyboard,
         });
