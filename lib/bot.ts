@@ -127,49 +127,7 @@ bot.on("message", async (ctx) => {
         } else {
           info.name = ctx.msg.text || ""; //сохраняем в переменную
           await ctx.reply("Ну, проходи тогда " + info.name + "!");
-          await ctx.reply("Сколько лет то тебе?");
-          setState("setAge");
-        }
-        break;
-
-      case "setAge":
-        if (isNaN(Number(ctx.msg.text))) {
-          await ctx.reply("Извини, но нужно ввести возраст числом!");
-          return;
-        }
-        info.age = Number(ctx.msg.text);
-        await ctx.reply("Выбери на клавиатуре свои интересы", {
-        reply_markup: coffeeKeyboard,
-        });
-        setState("setInterests");
-        break;
-
-        
-    case "setInterests":
-       // Отправить клавиатуру с сообщением
-        bot.on("callback_query:data")
-        await ctx.reply("Вот чем ты интересуешься:",
-        );
-        await ctx.reply(
-        info.interests.toString(),
-        );
-        await ctx.reply("Выбери кофейню", {
-        reply_markup: interesKeyboard,
-        });
-        setState("setCoffee");
-        break;
-
-
-      case "setCoffee":
-       // Отправить клавиатуру с сообщением
-       // Отправьте встроенную клавиатуру с сообщением.
-        bot.on("callback_query:data")
-        await ctx.reply(
-          "Встретиться тут:",
-        );
-        await ctx.reply(
-        info.interests.toString(),
-        );
+          await ctx.reply("Смотри, теперь твоя задача-правильно написать свою анкету, а то в базу данных я тебя не занесу. Напиши через Enter по циферкам \n1. Сколько на этом ты свете \n2. Чем ты увлекаешься? \n3. В какой кофейне и где ты бы хотел встретиться? \n4. Во сколько ты бы хотел увидеться");
         await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
         );
