@@ -134,7 +134,7 @@ bot.on("message", async (ctx) => {
           return;
           break
         }
-
+      setState("setInterests");
         break;
 
       case "review":
@@ -186,7 +186,7 @@ bot.on("message", async (ctx) => {
             break;
         }
         break;
-
+       
 
       case "setInterests":
         if (ctx.msg.text) {
