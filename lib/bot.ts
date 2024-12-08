@@ -25,18 +25,6 @@ export const info: UserInfo = {
 
 bot.command("start", async (ctx) => { // бот получает команду /start
   info.id = Number(ctx.msg.from?.id);
-  if (Boolean((await database.get(["users", info.id, "done"])).value) != false) {
-    // опитимизировать?
-    info.name = String((await database.get(["users", info.id, "name"])).value);
-    info.age = Number((await database.get(["users", info.id, "age"])).value);
-    info.interests = Array(
-      String((await database.get(["users", info.id, "interests"])).value),
-    );
-   
-    info.coffee = String((await database.get(["users", info.id, "coffee"])).value);
-    );
-    await ctx.reply(`Привет, ${info.name}!`, { reply_markup: menuKeyboard });
-  } else {
     await ctx.reply(
       "Йоу, чё как?! \nТы тут в первый раз. Тогда поясню. \nЯ бот, который поможет завести новые знакомства, встретиться, пообщатся. Ты не против? \nТогда начнём!",
     );
