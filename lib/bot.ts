@@ -20,7 +20,6 @@ export const info: UserInfo = {
   interests: "",
   coffe:"",
   done: false,
-  rating: 0,
 };
 
 
