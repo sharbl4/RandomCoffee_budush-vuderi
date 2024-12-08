@@ -190,22 +190,38 @@ bot.on("message", async (ctx) => {
        
 
       case "setInterests":
-        if (ctx.msg.text) {
-          for (const interest of ctx.msg.text?.split(",")) {
-            info.interests.push(interest.trim());
-          }
-        }
+       // Отправить клавиатуру с сообщением
+        await ctx.reply(text, {
+        reply_markup: interesKeyboard,
+        });
+        bot.on("message:text")
         await ctx.reply(
-          "Вот список твоих интересов:",
+          "Вот чем ты интересуешься:",
         );
         await ctx.reply(
           info.interests.toString(),
         );
-        await ctx.reply("Это все?", { reply_markup: yesOrNo }); // смотри bot.callbackQuery
-        setState("setInterests");
+        setState("setCoffee");
         break;
 
       default:
+        break;
+
+      case "setInterests":
+       // Отправить клавиатуру с сообщением
+        await ctx.reply(text, {
+        reply_markup: coffeekeyboard,
+        });
+        bot.on("message:text")
+        await ctx.reply(
+          "Встретиться тут:",
+        );
+        await ctx.reply(
+          info.coffee.toString(),
+        );
+        await ctx.reply(
+          "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
+        );
         break;
     }
   }
