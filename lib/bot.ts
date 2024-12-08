@@ -36,6 +36,7 @@ bot.command("start", async (ctx) => { // бот получает команду 
     info.coffee = String((await database.get(["users", info.id, "coffee"])).value);
 
     );
+   
     await ctx.reply(`Привет, ${info.name}!`, { reply_markup: menuKeyboard });
   } else {
     await ctx.reply(
