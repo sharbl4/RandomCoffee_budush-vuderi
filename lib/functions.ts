@@ -21,3 +21,14 @@ export async function setState(state: string) {
   await database.set(["users", info.id, "state"], state);
 }
 
+export async function updateRating(userId: string, isLike: boolean) {
+    if (!ratings[userId]) {
+        ratings[userId] = { likes: 0, dislikes: 0 };
+    }
+    if (isLike) {
+        ratings[userId].likes += 1;
+    } else {
+        ratings[userId].dislikes += 1;
+    }
+}
+
