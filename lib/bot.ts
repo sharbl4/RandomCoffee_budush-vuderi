@@ -139,7 +139,7 @@ bot.on("message", async (ctx) => {
         }
         info.age = Number(ctx.msg.text);
         await ctx.reply("Выбери на клавиатуре свои интересы", {
-        reply_markup: interesKeyboard,
+        reply_markup: coffeeKeyboard,
         });
         setState("setInterests");
         break;
@@ -154,7 +154,7 @@ bot.on("message", async (ctx) => {
         info.interests.toString(),
         );
         await ctx.reply("Выбери кофейню", {
-        reply_markup: inlineKeyboard,
+        reply_markup: interesKeyboard,
         });
         setState("setCoffee");
         break;
