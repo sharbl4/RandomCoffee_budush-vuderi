@@ -31,14 +31,9 @@ bot.command("start", async (ctx) => { // бот получает команду 
     info.interests = Array(
       String((await database.get(["users", info.id, "interests"])).value),
     );
-    info.geo.latitude = Number(
-      (await database.get(["users", info.id, "geo", "latitude"])).value,
-    );
-    info.geo.longitiute = Number(
-      (await database.get(["users", info.id, "geo", "longtitude"])).value,
-    );
-    info.time = String( database.get(["users", info.id, "state"])).value);
-    info. State = String(
+
+    info.time = String((await database.get(["users", info.id, "state"])).value);
+    info.state = String(
       (await database.get(["users", info.id, "state"])).value,
     );
     info.rating = Number(
@@ -47,11 +42,10 @@ bot.command("start", async (ctx) => { // бот получает команду 
     await ctx.reply(`Привет, ${info.name}!`, { reply_markup: menuKeyboard });
   } else {
     await ctx.reply(
-      "Привет!👋🏻 \nВижу, ты тут впервые. Я - бот Коффи☕️. С моей помощью ты сможешь пообщаться с людьми, которым интересно то же, что и тебе!",
+      "Йоу, чё как?! \nТы тут в первый раз. Тогда поясню. \nЯ бот, который поможет завести новые знакомства, встретиться, пообщатся. Ты не против? \nТогда начнём!",
     );
     await ctx.reply(
-      "🤔 А как зовут тебя? \n <b>Учти, что твое имя увидят другие пользователи.</b>",
-      { parse_mode: "HTML" }, // нужно, чтобы использовать теги из html
+      "Звать то тебя как? А прозвище то есть?",
     );
     setState("setName"); // следующим сообщением боту должно придти имя
   }
