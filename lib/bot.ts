@@ -25,7 +25,6 @@ export const info: UserInfo = {
 };
 
 
-
 bot.command("start", async (ctx) => { // бот получает команду /start
   info.id = Number(ctx.msg.from?.id);
   if (Boolean((await database.get(["users", info.id, "done"])).value) != false) {
