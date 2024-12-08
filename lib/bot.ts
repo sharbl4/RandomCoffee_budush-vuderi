@@ -207,7 +207,7 @@ bot.on("message", async (ctx) => {
       default:
         break;
 
-      case "setInterests":
+      case "setCoffee":
        // Отправить клавиатуру с сообщением
         await ctx.reply(text, {
         reply_markup: coffeekeyboard,
