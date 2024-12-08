@@ -141,15 +141,13 @@ bot.on("message", async (ctx) => {
         await ctx.reply("Выбери на клавиатуре свои интересы", {
         reply_markup: interesKeyboard,
         });
-        bot.on("message:text")
         setState("setInterests");
         break;
 
         
     case "setInterests":
        // Отправить клавиатуру с сообщением
-        await ctx.reply("Ты собака");
-
+        bot.on("message:text")
         await ctx.reply("Вот чем ты интересуешься:",
         );
         await ctx.reply(
@@ -158,7 +156,6 @@ bot.on("message", async (ctx) => {
         await ctx.reply("Выбери кофейню", {
         reply_markup: inlineKeyboard,
         });
-        bot.on("message:text")
         setState("setCoffee");
         break;
 
@@ -166,7 +163,7 @@ bot.on("message", async (ctx) => {
       case "setCoffee":
        // Отправить клавиатуру с сообщением
        // Отправьте встроенную клавиатуру с сообщением.
-
+        bot.on("message:text")
         await ctx.reply(
           "Встретиться тут:",
         );
