@@ -162,8 +162,9 @@ bot.on("message", async (ctx) => {
 
       case "setCoffee":
        // Отправить клавиатуру с сообщением
+       // Отправьте встроенную клавиатуру с сообщением.
         await ctx.reply(text, {
-        reply_markup: coffeekeyboard,
+        reply_markup: inlineKeyboard,
         });
         bot.on("message:text")
         await ctx.reply(
