@@ -137,14 +137,9 @@ bot.on("message", async (ctx) => {
           await ctx.reply("Извини, но нужно ввести возраст числом!");
           return;
         }
-        //info.age = Number(ctx.msg.text);
-        await ctx.reply(
-          "Отлично! 🤩 Отправь мне местоположение, рядом с которым тебе будет удобно встретиться",
+        info.age = Number(ctx.msg.text);
         );
-        await ctx.reply(
-          "👀 Подсказка: нажми на скрепку🖇 -> местоположение📍",
-        );
-        await ctx.reply(text, {
+        await ctx.reply("Выбери на клавиатуре свои интересы", {
         reply_markup: interesKeyboard,
         });
         bot.on("message:text")
@@ -161,7 +156,7 @@ bot.on("message", async (ctx) => {
         await ctx.reply(
         info.interests.toString(),
         );
-        await ctx.reply(text, {
+        await ctx.reply("Выбери кофейню", {
         reply_markup: inlineKeyboard,
         });
         bot.on("message:text")
