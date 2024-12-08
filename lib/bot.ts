@@ -204,8 +204,7 @@ bot.on("message", async (ctx) => {
         setState("setCoffee");
         break;
 
-      default:
-        break;
+
 
       case "setCoffee":
        // Отправить клавиатуру с сообщением
@@ -223,6 +222,9 @@ bot.on("message", async (ctx) => {
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
         );
         break;
+      
+      default:
+    break;
     }
   }
 });
