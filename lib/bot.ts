@@ -131,8 +131,10 @@ bot.on("message", async (ctx) => {
           info.age = Number(ctx.msg.text);
           await ctx.reply("Выбери на клавиатуре свои интересы", {
           reply_markup: coffeeKeyboard,
+          });
           await ctx.reply("Выбери кофейню", {
           reply_markup: interesKeyboard,
+          });
           await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
           );
