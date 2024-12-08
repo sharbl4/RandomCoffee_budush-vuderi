@@ -89,14 +89,10 @@ bot.command("dislike", async (ctx) => {
 // Команда /stats для получения статистики оценок
 bot.command("stats", async (ctx) => {
     const userId = ctx.from?.id.toString();
-    if (!userId) return;
-
     const userRatings = ratings[userId] || { likes: 0, dislikes: 0 };
     const response = `Статистика: Нравится: ${userRatings.likes}, Не нравится: ${userRatings.dislikes}`;
-
     await ctx.reply(response);
 });
-
 //обработка подтверждения интересов
 bot.callbackQuery("interestsDone", async (ctx) => {
   await ctx.deleteMessage();
