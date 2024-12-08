@@ -133,6 +133,7 @@ bot.on("message", async (ctx) => {
         if (isNaN(Number(ctx.msg.text))) {
           await ctx.reply("Косячишь! Возраст-это число");
           return;
+          info.age = ctx.msg.text || "";
           break
         }
       setState("setInterests");
