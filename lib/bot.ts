@@ -12,6 +12,8 @@ export const database = await Deno.openKv();
 
 export const bot = new Bot<MyContext>(Deno.env.get("BOT_TOKEN") || "7726323061:AAF5Ww47wy9VyHUo8TDnG22PxqybeiIsjfk");
 
+
+
 // info будет нужна для сохранения инфо пользователя в бд (или получения) - представляет из себя набор данных о пользователе  
 export const info: UserInfo = {
   id: 0,
