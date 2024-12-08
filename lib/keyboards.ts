@@ -30,11 +30,11 @@ export const coffekeyboard = new Keyboard()
   .resized();
 
 export const interesKeyboard=new Keyboard()
-  .text("Python").row()
-  .text("C++").row()
-  .text("TypeScript").row()
-  .text("C#").row()
-  .text("Java").row()
-  .text("PHP").row()
-  .text("Shell")
+  .text("Codding").row()
+  .text("Web-desigm").row()
+  .text("SMM").row()
+  .text("UX-design").row()
+  .text("UI-design").row()
+  .text("PC-building").row()
+  .text("PC-repair")
   .resized();
