@@ -136,11 +136,9 @@ bot.on("message", async (ctx) => {
           await ctx.reply("Косячишь! Возраст-это число");
           return;
         }
-        else {
           await ctx.reply("Выбери интересы на клавиатуре");
           info.age = ctx.msg.text || "";
           setState("setInterests");
-        }
         break;
 
         
