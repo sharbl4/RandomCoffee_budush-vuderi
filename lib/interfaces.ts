@@ -7,6 +7,7 @@ export interface UserInfo {
   interests: string;
   coffee:string;
   done: boolean;
+  state: string;
 }
 
 
