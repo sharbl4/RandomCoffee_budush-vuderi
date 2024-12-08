@@ -28,3 +28,14 @@ export const coffekeyboard = new Keyboard()
   .text("Скуратов. Иртышская Набережная, 30").row()
   .text("Энитайм. Лобкова, 6/1")
   .resized();
+
+
+export const interesKeyboard=new Keyboard()
+  .text("Python").row()
+  .text("C++").row()
+  .text("TypeScript").row()
+  .text("C#").row()
+  .text("Java").row
+  .text("PHP").row
+  .text("Shell")
+  .resized();
