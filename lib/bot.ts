@@ -138,7 +138,9 @@ bot.on("message", async (ctx) => {
           await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
           );
+        }
           break;
+        
 
       case "review":
         switch (ctx.msg.text) {
