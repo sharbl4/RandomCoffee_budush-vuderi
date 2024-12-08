@@ -127,14 +127,18 @@ bot.on("message", async (ctx) => {
         } else {
           info.name = ctx.msg.text || ""; //сохраняем в переменную
           await ctx.reply("Ну, проходи тогда " + info.name + "!");
+          setState()
           await ctx.reply("Сколько лет то тебе?");
           info.age = Number(ctx.msg.text);
+          setState()
           await ctx.reply("Выбери на клавиатуре свои интересы", {
           reply_markup: coffeeKeyboard,
           });
+          setState()
           await ctx.reply("Выбери кофейню", {
           reply_markup: interesKeyboard,
           });
+          setState()
           await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
           );
