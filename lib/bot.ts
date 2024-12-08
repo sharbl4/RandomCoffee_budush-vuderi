@@ -99,6 +99,7 @@ bot.callbackQuery("interestsDone", async (ctx) => {
   await ctx.reply("Прекрасно");
   await reviewProfile(ctx);
 });
+
 bot.callbackQuery("interestsNotDone", async (ctx) => {
   await ctx.deleteMessage();
   await ctx.reply("Пиши увлечения");
