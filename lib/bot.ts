@@ -18,7 +18,7 @@ export const info: UserInfo = {
   name: "",
   age: 0,
   interests: "",
-  coffe:"",
+  coffee:"",
   done: false,
 };
 
@@ -33,12 +33,8 @@ bot.command("start", async (ctx) => { // бот получает команду 
       String((await database.get(["users", info.id, "interests"])).value),
     );
    
-    info.time = String((await database.get(["users", info.id, "state"])).value);
-    info.state = String(
-      (await database.get(["users", info.id, "state"])).value,
-    );
-    info.rating = Number(
-      (await database.get(["users", info.id, "rating"])).value,
+    info.coffee = String((await database.get(["users", info.id, "coffee"])).value);
+
     );
     await ctx.reply(`Привет, ${info.name}!`, { reply_markup: menuKeyboard });
   } else {
@@ -148,10 +144,8 @@ bot.on("message", async (ctx) => {
             await database.set(["users", info.id, "name"], info.name);
             await database.set(["users", info.id, "age"], info.age);
             await database.set(["users", info.id, "interests"], info.interests);
-            await database.set(["users", info.id, "geo"], info.geo);
-            await database.set(["users", info.id, "state"], info.state);
-            await database.set(["users", info.id, "time"], info.time);
-            await database.set(["users", info.id, "done"], info.done);
+            await database.set(["users", info.id, "coffee"], info.coffee);
+
             break;
 
           case "Нет, хочу изменить":
