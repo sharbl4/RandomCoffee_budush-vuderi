@@ -137,7 +137,7 @@ bot.on("message", async (ctx) => {
           return;
         }
         else {
-          await ctx.reply("Ну, проходи тогда " + info.name + "!");
+          await ctx.reply("Выбери интересы на клавиатуре");
           info.age = ctx.msg.text || "";
           setState("setInterests");
         }
@@ -150,11 +150,10 @@ bot.on("message", async (ctx) => {
         reply_markup: interesKeyboard,
         });
         bot.on("message:text")
-        await ctx.reply(
-          "Вот чем ты интересуешься:",
+        await ctx.reply("Вот чем ты интересуешься:",
         );
         await ctx.reply(
-          info.interests.toString(),
+          info.interests = ctx.msg.text || "";
         );
         setState("setCoffee");
         break;
@@ -171,7 +170,7 @@ bot.on("message", async (ctx) => {
           "Встретиться тут:",
         );
         await ctx.reply(
-          info.coffee.toString(),
+        info.coffee = ctx.msg.text || "";
         );
         await ctx.reply(
           "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
