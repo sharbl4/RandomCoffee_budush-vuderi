@@ -147,7 +147,7 @@ bot.on("message", async (ctx) => {
         
     case "setInterests":
        // Отправить клавиатуру с сообщением
-        bot.on("message:text")
+        bot.callbackQuery()
         await ctx.reply("Вот чем ты интересуешься:",
         );
         await ctx.reply(
@@ -163,7 +163,7 @@ bot.on("message", async (ctx) => {
       case "setCoffee":
        // Отправить клавиатуру с сообщением
        // Отправьте встроенную клавиатуру с сообщением.
-        bot.on("message:text")
+        bot.callbackQuery()
         await ctx.reply(
           "Встретиться тут:",
         );
