@@ -223,41 +223,7 @@ bot.on("message", async (ctx) => {
             break;
         }
         break;
-       
 
-      case "setInterests":
-       // Отправить клавиатуру с сообщением
-        await ctx.reply(text, {
-        reply_markup: interesKeyboard,
-        });
-        bot.on("message:text")
-        await ctx.reply(
-          "Вот чем ты интересуешься:",
-        );
-        await ctx.reply(
-          info.interests.toString(),
-        );
-        setState("setCoffee");
-        break;
-
-
-
-      case "setCoffee":
-       // Отправить клавиатуру с сообщением
-        await ctx.reply(text, {
-        reply_markup: coffeekeyboard,
-        });
-        bot.on("message:text")
-        await ctx.reply(
-          "Встретиться тут:",
-        );
-        await ctx.reply(
-          info.coffee.toString(),
-        );
-        await ctx.reply(
-          "Хорошо! Твоя анкета создана! Жди новых сообщений с предложением попить кофейку!",
-        );
-        break;
       
       default:
     break;
