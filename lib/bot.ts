@@ -17,9 +17,8 @@ export const info: UserInfo = {
   id: 0,
   name: "",
   age: 0,
-  interests: [],
-  time: "",
-  state: "",// хотим ли мы File или HTMLImageElement добавить image?  МАРК 
+  interests: "",
+  coffe:"",
   done: false,
   rating: 0,
 };
