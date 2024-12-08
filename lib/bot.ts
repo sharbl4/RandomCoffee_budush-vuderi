@@ -22,6 +22,7 @@ export const info: UserInfo = {
   interests: "",
   coffee:"",
   done: false,
+  state: "",
 };
 
 bot.command("start", async (ctx) => { // бот получает команду /start
