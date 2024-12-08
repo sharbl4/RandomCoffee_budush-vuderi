@@ -27,6 +27,7 @@ export const coffekeyboard = new Keyboard()
   .text("Скуратов. Красный Путь, 63").row()
   .text("Скуратов. Иртышская Набережная, 30").row()
   .text("Энитайм. Лобкова, 6/1")
+  .oneTime()
   .resized();
 
 export const interesKeyboard=new Keyboard()
@@ -37,4 +38,5 @@ export const interesKeyboard=new Keyboard()
   .text("UI-design").row()
   .text("PC-building").row()
   .text("PC-repair")
+  .oneTime()
   .resized();
